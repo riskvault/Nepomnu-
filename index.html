@@ -137,16 +137,33 @@
 
     .mobile-menu {
       display: none;
-      padding: 0 1.5rem 1.25rem;
+      padding: 1rem 1.5rem 1.5rem;
       border-top: 1px solid var(--line);
       background: rgba(250, 252, 250, 0.98);
     }
 
-    .mobile-menu a {
+    .mobile-menu a:not(.btn) {
       display: block;
-      padding: 0.95rem 0;
+      padding: 1rem 0;
       color: var(--text);
       font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .mobile-menu .btn {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 1.25rem;
+      margin-top: 0.5rem;
+      border-radius: 18px;
+    }
+
+    .mobile-menu .btn-green,
+    .mobile-menu .btn-green:visited {
+      color: var(--white) !important;
     }
 
     body.menu-open .mobile-menu {
