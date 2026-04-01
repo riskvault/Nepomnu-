@@ -57,7 +57,6 @@
       display: block;
     }
 
-    /* ── NAV ── */
     .nav {
       position: fixed;
       top: 0;
@@ -148,11 +147,6 @@
       padding: 0.95rem 0;
       color: var(--text);
       font-weight: 500;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .mobile-menu a:last-child {
-      border-bottom: none;
     }
 
     body.menu-open .mobile-menu {
@@ -167,7 +161,6 @@
       transform: translateY(-3.5px) rotate(-45deg);
     }
 
-    /* ── BUTTONS ── */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -175,9 +168,6 @@
       gap: 0.5rem;
       border-radius: 14px;
       font-weight: 600;
-      font-family: 'Sora', sans-serif;
-      cursor: pointer;
-      border: none;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
     }
 
@@ -222,7 +212,6 @@
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
     }
 
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -313,7 +302,6 @@
       font-weight: 700;
     }
 
-    /* ── HERO CARD ── */
     .hero-card {
       background: linear-gradient(180deg, #ffffff 0%, #f8fbf9 100%);
       border-radius: 28px;
@@ -378,757 +366,544 @@
     }
 
     .check {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--mint);
-      color: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: var(--emerald);
+      font-weight: 700;
       flex-shrink: 0;
-      font-size: 0.7rem;
-      margin-top: 1px;
     }
 
-    /* ── SECTION SHARED ── */
-    .section {
+    .hero-card-btn {
+      width: 100%;
+    }
+
+    .services {
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 6rem 2rem;
     }
 
-    .section-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.76rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .section-tag {
+      display: inline-block;
+      background: var(--mint);
       color: var(--green);
-      margin-bottom: 0.9rem;
+      padding: 0.42rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
     }
 
-    .section-eyebrow::before {
-      content: '';
-      width: 20px;
-      height: 2px;
-      background: var(--emerald);
-      border-radius: 999px;
+    .section-tag-dark {
+      background: rgba(52, 208, 107, 0.12);
+      color: var(--emerald);
     }
 
     .section-title {
       font-family: 'Fraunces', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      letter-spacing: -0.025em;
-      line-height: 1.1;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
       color: var(--slate);
-      margin-bottom: 1.1rem;
     }
 
-    .section-desc {
-      font-size: 1rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      max-width: 560px;
-    }
-
-    /* ── SERVICES ── */
-    .services {
-      background: var(--white);
-    }
-
-    .services-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 2rem;
-      margin-bottom: 3.5rem;
-      flex-wrap: wrap;
+    .section-title-light {
+      color: var(--white);
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1.5rem;
     }
 
     .service-card {
-      background: var(--bg);
-      border-radius: 22px;
+      background: var(--white);
+      border-radius: 24px;
       padding: 2rem;
-      border: 1px solid var(--line);
-      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+      border: 1px solid rgba(27, 122, 61, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: var(--shadow-soft);
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-card);
-      border-color: rgba(27, 122, 61, 0.18);
+      border-color: rgba(52, 208, 107, 0.45);
     }
 
-    .service-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      background: var(--mint);
-      display: flex;
+    .service-badge {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.25rem;
+      padding: 0.38rem 0.8rem;
+      border-radius: 999px;
+      background: var(--mint);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
     }
 
     .service-card h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-family: 'Fraunces', serif;
+      font-size: 1.32rem;
       color: var(--slate);
-      margin-bottom: 0.55rem;
-      letter-spacing: -0.01em;
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
     }
 
     .service-card p {
-      font-size: 0.9rem;
+      font-size: 0.96rem;
       color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
+      line-height: 1.75;
+      font-weight: 400;
     }
 
     .service-price {
-      font-size: 0.84rem;
+      display: inline-block;
+      margin-top: 1.2rem;
       font-weight: 700;
-      color: var(--green);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how {
-      background: var(--bg);
-    }
-
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .step {
-      position: relative;
-    }
-
-    .step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 26px;
-      left: calc(100% - 0.5rem);
-      width: calc(100% - 1.5rem);
-      height: 1px;
-      background: var(--line);
-    }
-
-    .step-num {
-      width: 52px;
-      height: 52px;
-      border-radius: 16px;
-      background: var(--mint);
-      border: 2px solid rgba(27, 122, 61, 0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
-      font-size: 1.2rem;
       color: var(--green-dark);
-      font-weight: 600;
-      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
     }
 
-    .step h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--slate);
-      margin-bottom: 0.45rem;
-    }
-
-    .step p {
-      font-size: 0.88rem;
-      color: var(--text-light);
-      line-height: 1.7;
-    }
-
-    /* ── TESTIMONIALS ── */
     .testimonials {
-      background: var(--white);
+      background: var(--slate);
+      padding: 6rem 2rem;
     }
 
-    .testimonials-head {
-      text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
-    .testimonials-head .section-desc {
+    .testimonial-grid {
+      max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .testi-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
     }
 
-    .testi-card {
-      background: var(--bg);
-      border-radius: 22px;
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
       padding: 2rem;
-      border: 1px solid var(--line);
+      min-height: 100%;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
     }
 
     .stars {
-      display: flex;
-      gap: 3px;
+      color: #ffd700;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
       margin-bottom: 1rem;
     }
 
-    .star {
-      color: #f5a623;
-      font-size: 1rem;
-    }
-
-    .testi-card blockquote {
+    .testimonial-card p {
       font-size: 0.96rem;
-      line-height: 1.75;
-      color: var(--text);
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.72;
+      font-weight: 400;
       margin-bottom: 1.4rem;
-      font-style: normal;
     }
 
-    .testi-author {
+    .reviewer {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.8rem;
     }
 
-    .testi-avatar {
-      width: 40px;
-      height: 40px;
+    .reviewer-avatar {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: var(--mint);
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, var(--emerald), var(--green));
+      color: var(--white);
+      font-size: 0.84rem;
       font-weight: 700;
-      font-size: 0.85rem;
-      color: var(--green-dark);
-      flex-shrink: 0;
     }
 
-    .testi-name {
-      font-weight: 700;
+    .reviewer-name {
+      color: var(--white);
+      font-weight: 600;
       font-size: 0.92rem;
-      color: var(--slate);
     }
 
-    .testi-role {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin-top: 0.1rem;
+    .reviewer-role {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.82rem;
+      margin-top: 0.15rem;
     }
 
-    /* ── CTA ── */
-    .cta-section {
+    .cta {
       padding: 6rem 2rem;
-      background: linear-gradient(135deg, var(--green-dark) 0%, #1b7a3d 100%);
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, #f4faf6 100%);
+    }
+
+    .cta-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      color: var(--white);
+      padding: 3.4rem 2rem;
+      border-radius: 32px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 24px 60px rgba(15, 26, 20, 0.14);
     }
 
-    .cta-section::before {
+    .cta-card::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='30'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      top: -60%;
+      right: -10%;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(52, 208, 107, 0.22), transparent 68%);
     }
 
-    .cta-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
+    .cta-card h2,
+    .cta-card p,
+    .cta-card a {
       position: relative;
+      z-index: 1;
     }
 
-    .cta-inner h2 {
+    .cta-card h2 {
       font-family: 'Fraunces', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      letter-spacing: -0.025em;
-      line-height: 1.08;
-      color: var(--white);
-      margin-bottom: 1.1rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
     }
 
-    .cta-inner p {
-      font-size: 1.04rem;
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.7;
-      margin-bottom: 2.2rem;
-    }
-
-    .cta-btns {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .btn-outline-white {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      border-radius: 14px;
-      font-weight: 600;
-      font-family: 'Sora', sans-serif;
-      border: 2px solid rgba(255, 255, 255, 0.45);
-      color: var(--white);
-      background: transparent;
-      padding: 0.95rem 2rem;
-      font-size: 0.95rem;
-      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-    }
-
-    .btn-outline-white:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(255, 255, 255, 0.7);
-      transform: translateY(-2px);
-    }
-
-    /* ── FOOTER ── */
-    .footer {
-      background: var(--slate);
-      color: rgba(255, 255, 255, 0.55);
-      padding: 4rem 2rem 2.5rem;
-    }
-
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.4fr repeat(3, 1fr);
-      gap: 3rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      margin-bottom: 2rem;
-    }
-
-    .footer-brand .logo {
-      color: var(--white);
-      margin-bottom: 0.9rem;
-    }
-
-    .footer-brand p {
-      font-size: 0.88rem;
+    .cta-card p {
+      max-width: 560px;
+      margin: 0 auto 1.8rem;
+      font-size: 1rem;
       line-height: 1.75;
-      max-width: 260px;
+      opacity: 0.88;
     }
 
-    .footer-col h4 {
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: rgba(255, 255, 255, 0.35);
-      margin-bottom: 1.1rem;
-    }
-
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .footer-col a {
+    .footer {
+      padding: 3rem 1.5rem 3.4rem;
+      text-align: center;
+      color: var(--text-light);
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.55);
-      transition: color 0.2s ease;
+      border-top: 1px solid var(--mint);
+      background: var(--white);
     }
 
-    .footer-col a:hover {
-      color: var(--white);
+    .footer p + p {
+      margin-top: 0.45rem;
     }
 
-    .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      font-size: 0.84rem;
+    .footer strong {
+      color: var(--text);
     }
 
-    .footer-bottom a {
-      color: rgba(255, 255, 255, 0.45);
-      transition: color 0.2s ease;
-    }
-
-    .footer-bottom a:hover {
-      color: var(--white);
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 980px) {
+      .hero-grid,
+      .services-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
       }
 
-      .how-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .hero {
+        min-height: auto;
       }
 
-      .step:not(:last-child)::after {
-        display: none;
+      .hero-copy {
+        order: 1;
       }
 
-      .testi-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-top {
-        grid-template-columns: repeat(2, 1fr);
+      .hero-visual {
+        order: 2;
       }
     }
 
     @media (max-width: 768px) {
-      .nav-links,
-      .nav-links + .btn {
+      .nav-inner {
+        padding: 1rem 1.25rem;
+      }
+
+      .nav-links {
         display: none;
       }
 
       .menu-toggle {
-        display: flex;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        display: inline-flex;
       }
 
       .hero {
-        padding: 6rem 1.5rem 3rem;
-        min-height: auto;
+        padding: 6.5rem 1.5rem 3rem;
       }
 
-      .services-head {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero-grid {
+        gap: 2.4rem;
       }
 
-      .services-grid {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: clamp(2.3rem, 10vw, 3.2rem);
+        line-height: 1.05;
       }
 
-      .how-grid {
-        grid-template-columns: 1fr;
+      .hero-desc {
+        font-size: 1rem;
+        line-height: 1.7;
+        max-width: 100%;
       }
 
-      .testi-grid {
-        grid-template-columns: 1fr;
+      .hero-card {
+        padding: 1.7rem;
+        border-radius: 24px;
       }
 
-      .footer-top {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .price-amount {
+        font-size: 3.2rem;
       }
 
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .section {
+      .services,
+      .testimonials,
+      .cta {
         padding: 4rem 1.5rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.3rem;
+      }
+
+      .service-card,
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+
+      .cta-card {
+        padding: 2.6rem 1.4rem;
+        border-radius: 26px;
       }
     }
   </style>
 </head>
 <body>
-
-  <!-- ── NAVIGATION ── -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="#" class="logo">Spark<span>Clean</span></a>
+
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
-        <li><a href="#how">How it works</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#contact" class="btn btn-green nav-btn">Book a clean</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#quote" class="btn btn-green nav-btn">Free Quote</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.body.classList.toggle('menu-open')">
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <span></span>
         <span></span>
       </button>
     </div>
+
     <div class="mobile-menu">
-      <a href="#services" onclick="document.body.classList.remove('menu-open')">Services</a>
-      <a href="#how" onclick="document.body.classList.remove('menu-open')">How it works</a>
-      <a href="#testimonials" onclick="document.body.classList.remove('menu-open')">Reviews</a>
-      <a href="#contact" onclick="document.body.classList.remove('menu-open')">Book a clean</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#quote" class="btn btn-green">Free Quote</a>
     </div>
   </nav>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-tag">Now serving 14 neighbourhoods</div>
-        <h1>A spotless home, guaranteed.</h1>
-        <p class="hero-desc">
-          Professional, eco-friendly cleaning tailored to your schedule. Book in under 60 seconds — we handle the rest.
-        </p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn btn-green">Book a clean →</a>
-          <a href="#services" class="btn btn-outline">See all services</a>
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-tag">Now booking for this week</div>
+          <h1>Reliable cleaning for busy homes.</h1>
+          <p class="hero-desc">
+            Professional residential and commercial cleaning in Portland. Licensed,
+            insured, eco-friendly products, and easy online booking.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#quote" class="btn btn-green">Get a Free Quote</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="trust-item"><strong>500+</strong> homes cleaned</div>
+            <div class="trust-item"><strong>4.9★</strong> on Google</div>
+            <div class="trust-item"><strong>Licensed</strong> &amp; insured</div>
+          </div>
         </div>
-        <div class="hero-trust">
-          <div class="trust-item">⭐ <strong>4.9/5</strong> from 2,400+ reviews</div>
-          <div class="trust-item">🌿 Eco-certified products</div>
-          <div class="trust-item">🛡️ Fully insured &amp; vetted</div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="price-header">
+              <div class="price-label">Starting from</div>
+              <div class="price-amount">$99 <span>/ visit</span></div>
+              <div class="price-note">For a standard 2-bedroom home</div>
+            </div>
+
+            <ul class="price-features">
+              <li><span class="check">✓</span> Kitchen, bathrooms, and living areas</li>
+              <li><span class="check">✓</span> Eco-friendly cleaning products</li>
+              <li><span class="check">✓</span> All equipment provided</li>
+              <li><span class="check">✓</span> Flexible weekly or one-time visits</li>
+              <li><span class="check">✓</span> Licensed &amp; insured team</li>
+            </ul>
+
+            <a href="#quote" class="btn btn-green hero-card-btn">Check Availability</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Pricing card -->
-      <div class="hero-card">
-        <div class="price-header">
-          <p class="price-label">Standard clean · From</p>
-          <div class="price-amount">$79<span> / visit</span></div>
-          <p class="price-note">No hidden fees · Cancel anytime</p>
-        </div>
-        <ul class="price-features">
-          <li>
-            <div class="check">✓</div>
-            All rooms vacuumed &amp; mopped
-          </li>
-          <li>
-            <div class="check">✓</div>
-            Kitchen surfaces sanitised
-          </li>
-          <li>
-            <div class="check">✓</div>
-            Bathrooms scrubbed &amp; disinfected
-          </li>
-          <li>
-            <div class="check">✓</div>
-            Eco-friendly, pet-safe products
-          </li>
-          <li>
-            <div class="check">✓</div>
-            100% satisfaction guarantee
-          </li>
-        </ul>
-        <a href="#contact" class="btn btn-green" style="width:100%;font-size:0.96rem;">Get an instant quote</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SERVICES ── -->
-  <section class="section services" id="services">
-    <div class="section-inner">
-      <div class="services-head">
-        <div>
-          <div class="section-eyebrow">Services</div>
-          <h2 class="section-title">Every space, perfectly clean.</h2>
-          <p class="section-desc">From quick weekly refreshes to deep move-out cleans — we've got a service for every situation.</p>
-        </div>
-        <a href="#contact" class="btn btn-outline">View all services</a>
+    <section class="services" id="services">
+      <div class="section-header">
+        <div class="section-tag">Our Services</div>
+        <h2 class="section-title">Clean spaces, clear minds.</h2>
       </div>
 
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Standard Clean</h3>
-          <p>Regular maintenance cleaning to keep your home consistently fresh. Ideal for weekly or fortnightly visits.</p>
-          <div class="service-price">From $79 / visit →</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">✨</div>
-          <h3>Deep Clean</h3>
-          <p>A thorough top-to-bottom clean covering every corner, appliance, and surface — perfect for a seasonal reset.</p>
-          <div class="service-price">From $149 / visit →</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📦</div>
-          <h3>Move-In / Move-Out</h3>
-          <p>Get your bond back or start fresh in your new home. We leave the place spotless for inspection.</p>
-          <div class="service-price">From $199 / visit →</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
-          <h3>Office &amp; Commercial</h3>
-          <p>Flexible scheduling around your business hours. Maintain a professional environment your team will love.</p>
-          <div class="service-price">Custom pricing →</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🍽️</div>
-          <h3>Kitchen Deep Clean</h3>
-          <p>Ovens, range hoods, fridges, and every surface thoroughly degreased and sanitised.</p>
-          <div class="service-price">From $89 / session →</div>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🪟</div>
-          <h3>Window Cleaning</h3>
-          <p>Interior and exterior window cleaning for a streak-free shine. Available as an add-on or standalone service.</p>
-          <div class="service-price">From $59 / session →</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <article class="service-card">
+          <div class="service-badge">Popular</div>
+          <h3>Regular Cleaning</h3>
+          <p>
+            Weekly or bi-weekly visits to keep your home consistently fresh and tidy.
+            A simple option for busy households.
+          </p>
+          <span class="service-price">From $99 / visit</span>
+        </article>
 
-  <!-- ── HOW IT WORKS ── -->
-  <section class="section how" id="how">
-    <div class="section-inner">
-      <div style="text-align:center; margin-bottom: 1rem;">
-        <div class="section-eyebrow" style="justify-content:center;">How it works</div>
-        <h2 class="section-title" style="margin: 0 auto;">Clean home in 4 easy steps.</h2>
-      </div>
-      <div class="how-grid">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Choose your service</h3>
-          <p>Pick the clean that suits your space and schedule from our simple online booking form.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Get an instant quote</h3>
-          <p>See transparent pricing upfront — no surprises, no hidden fees. Book in under 60 seconds.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>We come to you</h3>
-          <p>A vetted, insured SparkClean pro arrives on time with all the eco-friendly supplies needed.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Enjoy a spotless home</h3>
-          <p>Sit back and relax. If anything isn't perfect, we'll return within 24 hours to fix it — free.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <article class="service-card">
+          <div class="service-badge">Detailed</div>
+          <h3>Deep Cleaning</h3>
+          <p>
+            Top-to-bottom intensive cleaning with extra attention to buildup, edges,
+            fixtures, and overlooked areas.
+          </p>
+          <span class="service-price">From $199 / session</span>
+        </article>
 
-  <!-- ── TESTIMONIALS ── -->
-  <section class="section testimonials" id="testimonials">
-    <div class="section-inner">
-      <div class="testimonials-head">
-        <div class="section-eyebrow" style="justify-content:center;">Reviews</div>
-        <h2 class="section-title">Loved by 2,400+ homes.</h2>
-        <p class="section-desc">Real reviews from real customers. We take pride in making every clean count.</p>
+        <article class="service-card">
+          <div class="service-badge">Rental</div>
+          <h3>Move In / Move Out</h3>
+          <p>
+            Designed for move-in and move-out standards, whether you are preparing a
+            home for new occupants or settling into a fresh space.
+          </p>
+          <span class="service-price">From $249 / session</span>
+        </article>
+
+        <article class="service-card">
+          <div class="service-badge">Commercial</div>
+          <h3>Office Cleaning</h3>
+          <p>
+            Flexible commercial cleaning for offices and small workspaces with daily,
+            weekly, or monthly scheduling options.
+          </p>
+          <span class="service-price">Custom quote</span>
+        </article>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
-          <blockquote>"The team was punctual, thorough, and so friendly. My bathroom has never looked this good. Will absolutely be booking again every fortnight!"</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">SR</div>
+    </section>
+
+    <section class="testimonials" id="reviews">
+      <div class="section-header">
+        <div class="section-tag section-tag-dark">What Our Clients Say</div>
+        <h2 class="section-title section-title-light">Trusted by Portland homeowners</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            They handled a move-in clean for our new place and the whole home felt
+            ready from day one. Smooth booking and great attention to detail.
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">SK</div>
             <div>
-              <div class="testi-name">Sarah R.</div>
-              <div class="testi-role">Weekly plan customer</div>
+              <div class="reviewer-name">Sarah K.</div>
+              <div class="reviewer-role">Homeowner, NW Portland</div>
             </div>
           </div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
-          <blockquote>"Used SparkClean for a move-out clean and got my full bond back. The place was immaculate. Best $199 I've ever spent — highly recommend."</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">JM</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            We use SparkClean for turnover cleaning and the process has been very
+            reliable. Fast communication, clean finishes, and easy scheduling.
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">MR</div>
             <div>
-              <div class="testi-name">James M.</div>
-              <div class="testi-role">Move-out clean</div>
+              <div class="reviewer-name">Mike R.</div>
+              <div class="reviewer-role">Short-term Rental Host</div>
             </div>
           </div>
-        </div>
-        <div class="testi-card">
-          <div class="stars">
-            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-          </div>
-          <blockquote>"Signed up for the office plan and our team couldn't be happier. The space feels professional and welcoming every morning. Great value."</blockquote>
-          <div class="testi-author">
-            <div class="testi-avatar">LP</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            We wanted a cleaning service that felt professional without harsh products.
+            The experience was polished from quote to final visit.
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">JL</div>
             <div>
-              <div class="testi-name">Lisa P.</div>
-              <div class="testi-role">Office plan customer</div>
+              <div class="reviewer-name">Jenny L.</div>
+              <div class="reviewer-role">Parent, SE Portland</div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── CTA ── -->
-  <section class="cta-section" id="contact">
-    <div class="cta-inner">
-      <h2>Ready for a cleaner home?</h2>
-      <p>Book online in 60 seconds. No contracts, no fuss — just a spotless space you'll love coming home to.</p>
-      <div class="cta-btns">
-        <a href="#contact" class="btn btn-white">Book a clean today →</a>
-        <a href="tel:+18005555555" class="btn-outline-white">📞 Call us free</a>
+    <section class="cta" id="quote">
+      <div class="cta-card">
+        <h2>Get your free quote in under a minute</h2>
+        <p>
+          Tell us about your space and we will send a tailored estimate with clear
+          pricing and no pressure.
+        </p>
+        <a href="#" class="btn btn-white">Get My Free Quote</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ── FOOTER ── -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#" class="logo">Spark<span>Clean</span></a>
-          <p>Professional, eco-friendly cleaning services for homes and offices. Trusted by thousands of happy customers.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Standard Clean</a></li>
-            <li><a href="#services">Deep Clean</a></li>
-            <li><a href="#services">Move-In / Move-Out</a></li>
-            <li><a href="#services">Office Cleaning</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Help centre</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 SparkClean. All rights reserved.</span>
-        <span>Made with 💚 for cleaner homes</span>
-      </div>
-    </div>
+    <p><strong>SparkClean</strong> — Residential &amp; Commercial Cleaning in Portland</p>
+    <p>Licensed · Bonded · Insured · Eco-Friendly</p>
+    <p>(555) 123-4567 · hello@sparkclean-demo.com</p>
   </footer>
 
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        document.body.classList.toggle('menu-open');
+        const expanded = document.body.classList.contains('menu-open');
+        menuToggle.setAttribute('aria-expanded', String(expanded));
+      });
+    }
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        document.body.classList.remove('menu-open');
+        if (menuToggle) {
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
